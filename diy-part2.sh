@@ -18,3 +18,8 @@
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+# 替换feeds源为中科大镜像，加速下载
+sed -i 's,https://git.openwrt.org/openwrt/feeds/packages.git,https://mirrors.ustc.edu.cn/openwrt/packages.git,g' feeds.conf.default
+sed -i 's,https://git.openwrt.org/openwrt/feeds/luci.git,https://mirrors.ustc.edu.cn/openwrt/luci.git,g' feeds.conf.default
+sed -i 's,https://git.openwrt.org/openwrt/feeds/routing.git,https://mirrors.ustc.edu.cn/openwrt/routing.git,g' feeds.conf.default
+sed -i 's,https://git.openwrt.org/openwrt/feeds/telephony.git,https://mirrors.ustc.edu.cn/openwrt/telephony.git,g' feeds.conf.default
